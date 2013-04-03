@@ -8,5 +8,10 @@
   $('#answer').click(function () {
     log($('#guessed-code').val());  // TODO: Show a proper message.
   });
+
+  $('#console form').submit(function (e) {
+    $('#answer').click();
+    e.preventDefault();
+  });
 })();
 // vim: expandtab softtabstop=2 shiftwidth=2
