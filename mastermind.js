@@ -40,7 +40,7 @@
     var result = compare(guessedCode, theSecretCode);
     log(
       guessedCode +
-      ' ---> ' +
+      ' \u21d2 ' +
       result.hitCount + ' hit(s), ' +
       result.blowCount + ' blow(s)'
     );
