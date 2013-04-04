@@ -1,4 +1,13 @@
 (function () {
+  function compare(guessedCode, secretCode) {
+    // TODO: Implement.
+    return {
+      right: false,
+      hitCount: 0,
+      blowCount: 0
+    }
+  }
+
   function log(message) {
     var $line = $('<div class="line"></div>');
     $line.text(message);
