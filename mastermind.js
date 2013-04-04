@@ -1,4 +1,6 @@
 (function () {
+  var theSecretCode = '1234';  // TODO: Generate a random code.
+
   function compare(guessedCode, secretCode) {
     // TODO: Implement.
     return {
