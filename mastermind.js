@@ -45,7 +45,7 @@
       result.blowCount + ' blow(s)'
     );
     if (result.right)
-      log('Congratulations!');
+      log('Congratulations! You break the secret code!');
   });
 
   $('#console form').submit(function (e) {
