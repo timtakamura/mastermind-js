@@ -30,7 +30,7 @@
   }
 
   function log(message) {
-    var $line = $('<div class="line"></div>');
+    var $line = $('<div class="line text-center"></div>');
     $line.text(message);
     $('#message').prepend($line);
   }
