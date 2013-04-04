@@ -37,6 +37,14 @@
 
   $('#answer').click(function () {
     var guessedCode = $('#guessed-code').val();
+    if (guessedCode.length != theSecretCode.length) {
+      log(
+        'The secret code consists of ' + theSecretCode.length + ' digits.' +
+        '  Please answer a code with the same length.'
+      );
+      return;
+    }
+
     var result = compare(guessedCode, theSecretCode);
     log(
       guessedCode +
