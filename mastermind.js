@@ -1,5 +1,16 @@
 (function () {
-  var theSecretCode = '1234';  // TODO: Generate a random code.
+  function generateSecretCode(codeLength) {
+    var availableDigits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+    var secretCode = [];
+    for (var i = 0; i < codeLength; i++) {
+      var j = Math.floor(Math.random() * availableDigits.length);
+      secretCode.push(availableDigits[j]);
+      availableDigits.splice(j, 1);
+    }
+
+    return secretCode;
+  }
 
   function compare(guessedCode, secretCode) {
     // Assumption: A code doesn't have duplicated characters.
@@ -34,6 +45,8 @@
     $line.text(message);
     $('#message').prepend($line);
   }
+
+  var theSecretCode = generateSecretCode(4);
 
   $('#answer').click(function () {
     var guessedCode = $('#guessed-code').val();
