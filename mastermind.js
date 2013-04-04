@@ -17,7 +17,16 @@
   }
 
   $('#answer').click(function () {
-    log($('#guessed-code').val());  // TODO: Show a proper message.
+    var guessedCode = $('#guessed-code').val();
+    var result = compare(guessedCode, theSecretCode);
+    log(
+      guessedCode +
+      ' ---> ' +
+      result.hitCount + ' hit(s), ' +
+      result.blowCount + ' blow(s)'
+    );
+    if (result.right)
+      log('Congratulations!');
   });
 
   $('#console form').submit(function (e) {
