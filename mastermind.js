@@ -46,7 +46,8 @@
     $('#message').prepend($line);
   }
 
-  var theSecretCode = generateSecretCode(4);
+  var theSecretCodeLength = 4;
+  var theSecretCode = generateSecretCode(theSecretCodeLength);
 
   $('#answer').click(function () {
     var guessedCode = $('#guessed-code').val();
