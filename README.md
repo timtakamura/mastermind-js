@@ -1,4 +1,4 @@
-= Mastermind
+# Mastermind
 
 A variant of [Mastermind](http://en.wikipedia.org/wiki/Mastermind_%28board_game%29).
 
