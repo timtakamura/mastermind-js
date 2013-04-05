@@ -47,7 +47,11 @@
   }
 
   var theSecretCodeLength = 4;
-  var theSecretCode = generateSecretCode(theSecretCodeLength);
+  var theSecretCode;
+
+  function startNewGame() {
+    theSecretCode = generateSecretCode(theSecretCodeLength);
+  }
 
   $('#answer').click(function () {
     var guessedCode = $('#guessed-code').val();
@@ -74,5 +78,7 @@
     $('#answer').click();
     e.preventDefault();
   });
+
+  startNewGame();
 })();
 // vim: expandtab softtabstop=2 shiftwidth=2
