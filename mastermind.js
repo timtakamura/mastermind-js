@@ -71,8 +71,13 @@
       result.hitCount + ' hit(s), ' +
       result.blowCount + ' blow(s)'
     );
-    if (result.right)
+    if (result.right) {
+      if (theSecretCodeLength < 10)
+        theSecretCodeLength++;
       log('Congratulations! You break the secret code!');
+      log('Let\'s start a new game - with ' + theSecretCodeLength + ' random digits');
+      startNewGame();
+    }
   });
 
   $('#console form').submit(function (e) {
