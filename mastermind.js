@@ -51,6 +51,7 @@
 
   function startNewGame() {
     theSecretCode = generateSecretCode(theSecretCodeLength);
+    $('#the-secret-code-length').text(theSecretCodeLength);
   }
 
   $('#answer').click(function () {
