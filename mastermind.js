@@ -64,7 +64,7 @@
       return;
     }
 
-    var result = compare(guessedCode, theSecretCode);
+    var result = compare(guessedCode.split(''), theSecretCode);
     log(
       guessedCode +
       ' \u21d2 ' +
