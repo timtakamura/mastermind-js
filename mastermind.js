@@ -15,19 +15,16 @@
   function compare(guessedCode, secretCode) {
     // Assumption: A code doesn't have duplicated characters.
     var hitCount = 0;
-    for (var si = 0; si < secretCode.length; si++)
-    {
+    for (var si = 0; si < secretCode.length; si++) {
       if (secretCode[si] == guessedCode[si])
         hitCount++;
     }
 
     var blowCount = 0;
-    for (var si = 0; si < secretCode.length; si++)
-    {
+    for (var si = 0; si < secretCode.length; si++) {
       if (secretCode[si] == guessedCode[si])
         continue;
-      for (var gi = 0; gi < guessedCode.length; gi++)
-      {
+      for (var gi = 0; gi < guessedCode.length; gi++) {
         if (secretCode[si] == guessedCode[gi])
           blowCount++;
       }
